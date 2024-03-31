@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?><!--Length Units Convertor-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/welcome_luc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Welcome to the \nLength Units Convertor!"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="4dp" />
+
+
+    <TextView
+        android:id="@+id/celsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:text="Celsius:"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputCelsius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_luc" />
+
+    <EditText
+        android:id="@+id/inputCelsius"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/fahrenheit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsius" />
+
+    <TextView
+        android:id="@+id/fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Fahrenheit:"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputFahrenheit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCelsius" />
+
+    <EditText
+        android:id="@+id/inputFahrenheit"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/kelvin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheit" />
+
+    <TextView
+        android:id="@+id/kelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Kelvin:"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputKelvin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputFahrenheit" />
+
+    <EditText
+        android:id="@+id/inputKelvin"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/convertBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kelvin" />
+
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/cleanBtn" />
+
+    <Button
+        android:id="@+id/cleanBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cleanBtn"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/exitBtn" />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/exitBtn"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/convert"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="34dp"-->
+    <!--        android:text="Convert"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="48sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/inputKelvin" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/clean"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Clean"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="48sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        tools:layout_editor_absoluteY="566dp"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/convert"/>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/exit"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Exit"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="48sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/clean" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
